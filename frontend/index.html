@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>daarbnotes</title>
+    <script src="./src/main.js" type="module"></script>
+
+</head>
+
+<body>
+    <main class="container" style="display: grid;" id="app">
+        <header style="grid-column: 1; min-width: 192px">
+            <ul id="noteList">
+            </ul>
+        </header>
+        <section style="grid-column: 4 / end;" id="note">
+            <div id="topBar">
+                <input id="noteTitle" type="text" placeholder="note title">
+                <div role="group">
+                    <button id="rtlButton">dirSwap</button>
+                    <button id="saveButton">Save</button>
+                    <button id="newNoteButton">New Note</button>
+                    <button id="deleteNoteButton">Delete Note</button>
+                </div>
+            </div>
+            <textarea dir="ltr" spellcheck="false" id="noteBody"></textarea>
+        </section>
+    </main>
+</body>
+
+</html>
