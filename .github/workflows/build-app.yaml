@@ -2,8 +2,6 @@ name: Wails build
 
 on:
   push:
-
-on:
   workflow_dispatch:
 
 env:
