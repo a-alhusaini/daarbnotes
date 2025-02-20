@@ -1,5 +1,7 @@
 # daarbnotes - simple, offline, privacy focused notes app with screen reader support
 
+## [Download](https://github.com/a-alhusaini/daarbnotes/releases/)
+
 ## About: why make another notes app?
 
 Recently, I got into the habit of journaling on a daily basis. I used apple notes for this purpose as it was a good app that had decent screen reader support. As I am blind, being able to navigate my notes app with a screen reader is an important feature.
