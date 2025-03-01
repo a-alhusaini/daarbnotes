@@ -183,11 +183,19 @@ window.addEventListener("load", async () => {
 
   $noteTitle.addEventListener("blur", () => {
     $state.newNoteName = $noteTitle.value;
-    if ($noteBody.value.trim() != "") {
-      RenameNote($state.oldNoteName, $state.newNoteName)
-        .then(() => console.log("renamed note successfully"))
-        .catch((e) => console.error("failed to rename note" + e));
-      populateNoteList($noteTitle, $noteBody, $noteList);
+
+    if ($state.newNoteName.trim() == "" || $noteBody.value.trim() == "") {
+      return;
     }
+
+    if ($state.oldNoteName.trim() == "") {
+      populateNoteList($noteTitle, $noteBody, $noteList);
+      return WriteNote($state.newNoteName, $noteBody.value);
+    }
+
+    RenameNote($state.oldNoteName, $state.newNoteName)
+      .then(() => console.log("renamed note successfully"))
+      .catch((e) => console.error("failed to rename note" + e));
+    populateNoteList($noteTitle, $noteBody, $noteList);
   });
 });
